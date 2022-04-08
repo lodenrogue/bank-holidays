@@ -13,7 +13,8 @@ public class USBankFactory {
     public static Bank createBank() {
         List<Holiday> holidays = List.of(
                 new USNewYearsHoliday(),
-                new USMartinLutherKingHoliday());
+                new USMartinLutherKingHoliday(),
+                new USPresidentsDayHoliday());
         return new Bank(holidays);
     }
 }

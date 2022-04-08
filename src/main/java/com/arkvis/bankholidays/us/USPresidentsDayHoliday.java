@@ -7,17 +7,17 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoField;
 
-public class USMartinLutherKingHoliday implements Holiday {
+public class USPresidentsDayHoliday implements Holiday {
 
     @Override
     public boolean isHoliday(LocalDate day) {
-        return isInJanuary(day)
+        return isInFebruary(day)
                 && isAMonday(day)
                 && day.get(ChronoField.ALIGNED_WEEK_OF_MONTH) == 3;
     }
 
-    private boolean isInJanuary(LocalDate day) {
-        return day.getMonth().equals(Month.JANUARY);
+    private boolean isInFebruary(LocalDate day) {
+        return day.getMonth().equals(Month.FEBRUARY);
     }
 
     private boolean isAMonday(LocalDate day) {
