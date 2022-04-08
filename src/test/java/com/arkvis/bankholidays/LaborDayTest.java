@@ -36,13 +36,6 @@ class LaborDayTest {
     }
 
     @Test
-    void should_returnFalse_when_checkingIfLaborDayIsAHoliday() {
-        LocalDate laborDay = LocalDate.of(2022, 9, 5);
-        Bank bank = USBankFactory.createBank();
-        assertTrue(bank.isHoliday(laborDay));
-    }
-
-    @Test
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-10-03 is the first Monday of the month but is not in September
         LocalDate wrongMonth = LocalDate.of(2022, 10, 3);
