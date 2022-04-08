@@ -1,10 +1,9 @@
 package com.arkvis.bankholidays;
 
-import com.arkvis.bankholidays.us.USMartinLutherKingHoliday;
+import com.arkvis.bankholidays.us.USBankFactory;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -19,7 +18,7 @@ class MartinLutherKingDayTest {
         LocalDate mlk2025 = LocalDate.of(2025, 1, 20);
         LocalDate mlk2026 = LocalDate.of(2026, 1, 19);
 
-        Bank bank = new Bank(List.of(new USMartinLutherKingHoliday()));
+        Bank bank = USBankFactory.createBank();
         assertTrue(bank.isHoliday(mlk2022));
         assertTrue(bank.isHoliday(mlk2023));
         assertTrue(bank.isHoliday(mlk2024));
@@ -30,7 +29,7 @@ class MartinLutherKingDayTest {
     @Test
     void should_returnFalse_when_checkingIfDayAfterMLKIsAHoliday() {
         LocalDate dayAfter = LocalDate.of(2022, 1, 18);
-        Bank bank = new Bank(List.of(new USMartinLutherKingHoliday()));
+        Bank bank = USBankFactory.createBank();
         assertFalse(bank.isHoliday(dayAfter));
     }
 }
