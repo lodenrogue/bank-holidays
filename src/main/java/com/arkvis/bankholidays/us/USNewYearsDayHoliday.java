@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class USNewYearsHoliday implements Holiday {
+public class USNewYearsDayHoliday implements Holiday {
 
     @Override
     public boolean isHoliday(LocalDate day) {

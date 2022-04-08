@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoField;
 
-public class USMartinLutherKingHoliday implements Holiday {
+public class USMartinLutherKingDayHoliday implements Holiday {
 
     @Override
     public boolean isHoliday(LocalDate day) {
