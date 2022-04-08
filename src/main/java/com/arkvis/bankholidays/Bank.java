@@ -1,8 +1,17 @@
 package com.arkvis.bankholidays;
 
 import java.time.LocalDate;
+import java.util.List;
 
-public interface Bank {
+public class Bank {
 
-    boolean isHoliday(LocalDate day);
+    private final List<Holiday> holidays;
+
+    public Bank(List<Holiday> holidays) {
+        this.holidays = holidays;
+    }
+
+    public boolean isHoliday(LocalDate day) {
+        return holidays.stream().anyMatch(holiday -> holiday.isHoliday(day));
+    }
 }
