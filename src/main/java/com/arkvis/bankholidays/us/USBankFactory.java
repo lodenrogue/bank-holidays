@@ -19,7 +19,8 @@ public class USBankFactory {
                 new USJuneteenthDayHoliday(),
                 new USIndependenceDayHoliday(),
                 new USLaborDayHoliday(),
-                new USColumbusDayHoliday());
+                new USColumbusDayHoliday(),
+                new USVeteransDayHoliday());
 
         return new Bank(holidays);
     }

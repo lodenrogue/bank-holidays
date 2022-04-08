@@ -27,7 +27,7 @@ class JuneteenthDayTest {
     }
 
     @Test
-    void should_returnFalse_when_checkingIfTheDayAfterJuneteenthFallingOnAMondayIsAHoliday() {
+    void should_returnTrue_when_checkingIfTheDayAfterJuneteenthFallingOnAMondayIsAHoliday() {
         // 2022-06-20 falls on a Monday
         LocalDate dayAfter = LocalDate.of(2022, 6, 20);
         Bank bank = USBankFactory.createBank();
