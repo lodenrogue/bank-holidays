@@ -20,7 +20,8 @@ public class USBankFactory {
                 new USIndependenceDayHoliday(),
                 new USLaborDayHoliday(),
                 new USColumbusDayHoliday(),
-                new USVeteransDayHoliday());
+                new USVeteransDayHoliday(),
+                new USThanksgivingDayHoliday());
 
         return new Bank(holidays);
     }
