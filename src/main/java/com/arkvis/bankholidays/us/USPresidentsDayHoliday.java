@@ -13,7 +13,11 @@ public class USPresidentsDayHoliday implements Holiday {
     public boolean isHoliday(LocalDate day) {
         return isInFebruary(day)
                 && isAMonday(day)
-                && day.get(ChronoField.ALIGNED_WEEK_OF_MONTH) == 3;
+                && isThirdWeek(day);
+    }
+
+    private boolean isThirdWeek(LocalDate day) {
+        return day.get(ChronoField.ALIGNED_WEEK_OF_MONTH) == 3;
     }
 
     private boolean isInFebruary(LocalDate day) {
