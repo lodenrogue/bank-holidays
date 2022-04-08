@@ -8,6 +8,8 @@ import java.time.Month;
 
 public class USNewYearsDayHoliday implements Holiday {
 
+    private static final int NEW_YEARS_DAY = 1;
+
     @Override
     public boolean isHoliday(LocalDate day) {
         if (isNewYearsDay(day)) return true;
@@ -15,11 +17,11 @@ public class USNewYearsDayHoliday implements Holiday {
     }
 
     private boolean isNewYearsDay(LocalDate day) {
-        return isInJanuary(day) && day.getDayOfMonth() == 1;
+        return isInJanuary(day) && day.getDayOfMonth() == NEW_YEARS_DAY;
     }
 
     private boolean isDayAfterNewYearsDay(LocalDate day) {
-        return isInJanuary(day) && day.getDayOfMonth() == 2;
+        return isInJanuary(day) && day.getDayOfMonth() == NEW_YEARS_DAY + 1;
     }
 
     private boolean isAMonday(LocalDate day) {
