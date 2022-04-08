@@ -5,12 +5,18 @@ import com.arkvis.bankholidays.Bank;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.temporal.ChronoField;
 
 public class USBank implements Bank {
 
     @Override
     public boolean isHoliday(LocalDate day) {
-        return isNewYearsHoliday(day);
+        return isNewYearsHoliday(day)
+                || isMLKHoliday(day);
+    }
+
+    private boolean isMLKHoliday(LocalDate day) {
+        return isAMonday(day) && day.get(ChronoField.ALIGNED_WEEK_OF_MONTH) == 3;
     }
 
     private boolean isNewYearsHoliday(LocalDate day) {
