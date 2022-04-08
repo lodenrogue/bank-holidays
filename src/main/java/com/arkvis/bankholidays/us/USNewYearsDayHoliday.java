@@ -11,7 +11,7 @@ public class USNewYearsDayHoliday implements Holiday {
     @Override
     public boolean isHoliday(LocalDate day) {
         if (isNewYearsDay(day)) return true;
-        return isDayAfterNewYearsDay(day) && isAMonday(day);
+        return isAMonday(day) && isDayAfterNewYearsDay(day);
     }
 
     private boolean isNewYearsDay(LocalDate day) {
