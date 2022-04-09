@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class USNewYearsDayHoliday implements Holiday {
+public class USNewYearsDay implements Holiday {
 
     private static final int NEW_YEARS_DAY = 1;
 

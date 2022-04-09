@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USLaborDayHoliday;
+import com.arkvis.bankholidays.us.USLaborDay;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -39,7 +39,7 @@ class LaborDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-10-03 is the first Monday of the month but is not in September
         LocalDate wrongMonth = LocalDate.of(2022, 10, 3);
-        Bank bank = new Bank(List.of(new USLaborDayHoliday()));
+        Bank bank = new Bank(List.of(new USLaborDay()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

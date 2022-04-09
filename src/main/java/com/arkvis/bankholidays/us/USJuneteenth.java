@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class USJuneteenthDayHoliday implements Holiday {
+public class USJuneteenth implements Holiday {
     private static final int JUNETEENTH_DAY = 19;
 
     @Override

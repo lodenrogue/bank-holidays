@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class USIndependenceDayHoliday implements Holiday {
+public class USIndependenceDay implements Holiday {
 
     private static final int INDEPENDENCE_DAY = 4;
 

@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USVeteransDayHoliday;
+import com.arkvis.bankholidays.us.USVeteransDay;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -38,7 +38,7 @@ class VeteransDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-04-11 falls on the 11th but is not in November
         LocalDate wrongMonth = LocalDate.of(2022, 4, 11);
-        Bank bank = new Bank(List.of(new USVeteransDayHoliday()));
+        Bank bank = new Bank(List.of(new USVeteransDay()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

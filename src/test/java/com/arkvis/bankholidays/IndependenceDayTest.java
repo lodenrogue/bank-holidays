@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USIndependenceDayHoliday;
+import com.arkvis.bankholidays.us.USIndependenceDay;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -38,7 +38,7 @@ class IndependenceDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-11-04 is the 4th day of the month but is not July
         LocalDate wrongMonth = LocalDate.of(2022, 11, 4);
-        Bank bank = new Bank(List.of(new USIndependenceDayHoliday()));
+        Bank bank = new Bank(List.of(new USIndependenceDay()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

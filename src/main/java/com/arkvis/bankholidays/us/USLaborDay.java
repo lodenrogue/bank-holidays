@@ -7,24 +7,24 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoField;
 
-public class USPresidentsDayHoliday implements Holiday {
+public class USLaborDay implements Holiday {
 
     @Override
     public boolean isHoliday(LocalDate day) {
-        return isInFebruary(day)
+        return isInSeptember(day)
                 && isAMonday(day)
-                && isThirdWeek(day);
+                && isFirstWeek(day);
     }
 
-    private boolean isThirdWeek(LocalDate day) {
-        return day.get(ChronoField.ALIGNED_WEEK_OF_MONTH) == 3;
-    }
-
-    private boolean isInFebruary(LocalDate day) {
-        return day.getMonth().equals(Month.FEBRUARY);
+    private boolean isInSeptember(LocalDate day) {
+        return day.getMonth().equals(Month.SEPTEMBER);
     }
 
     private boolean isAMonday(LocalDate day) {
         return day.getDayOfWeek().equals(DayOfWeek.MONDAY);
+    }
+
+    private boolean isFirstWeek(LocalDate day) {
+        return day.get(ChronoField.ALIGNED_WEEK_OF_MONTH) == 1;
     }
 }

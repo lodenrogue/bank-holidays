@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
 
-public class USMemorialDayHoliday implements Holiday {
+public class USMemorialDay implements Holiday {
 
     private static final int JUNE_MONTH_NUMBER = 6;
 

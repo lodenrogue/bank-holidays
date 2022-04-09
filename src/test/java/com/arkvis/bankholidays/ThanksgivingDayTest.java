@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USThanksgivingDayHoliday;
+import com.arkvis.bankholidays.us.USThanksgiving;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -39,7 +39,7 @@ class ThanksgivingDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         //2022-08-25 is the fourth Thursday of the month but is not in November
         LocalDate dayAfter = LocalDate.of(2022, 8, 25);
-        Bank bank = new Bank(List.of(new USThanksgivingDayHoliday()));
+        Bank bank = new Bank(List.of(new USThanksgiving()));
         assertFalse(bank.isHoliday(dayAfter));
     }
 }

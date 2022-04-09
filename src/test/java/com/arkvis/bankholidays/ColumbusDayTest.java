@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USColumbusDayHoliday;
+import com.arkvis.bankholidays.us.USColumbusDay;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -39,7 +39,7 @@ class ColumbusDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-12-12 is the second Monday of the month but is not in October
         LocalDate wrongMonth = LocalDate.of(2022, 12, 12);
-        Bank bank = new Bank(List.of(new USColumbusDayHoliday()));
+        Bank bank = new Bank(List.of(new USColumbusDay()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

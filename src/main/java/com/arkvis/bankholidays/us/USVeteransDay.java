@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class USVeteransDayHoliday implements Holiday {
+public class USVeteransDay implements Holiday {
 
     private static final int VETERANS_DAY = 11;
 

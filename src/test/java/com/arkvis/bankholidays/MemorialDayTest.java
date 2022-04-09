@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USMemorialDayHoliday;
+import com.arkvis.bankholidays.us.USMemorialDay;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -39,7 +39,7 @@ class MemorialDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         //2022-08-29 is the last Monday of the month but is not in May
         LocalDate dayAfter = LocalDate.of(2022, 8, 29);
-        Bank bank = new Bank(List.of(new USMemorialDayHoliday()));
+        Bank bank = new Bank(List.of(new USMemorialDay()));
         assertFalse(bank.isHoliday(dayAfter));
     }
 }

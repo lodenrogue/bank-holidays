@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USJuneteenthDayHoliday;
+import com.arkvis.bankholidays.us.USJuneteenth;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -38,7 +38,7 @@ class JuneteenthDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-09-19 falls on the 19th but is not in June
         LocalDate wrongMonth = LocalDate.of(2022, 9, 19);
-        Bank bank = new Bank(List.of(new USJuneteenthDayHoliday()));
+        Bank bank = new Bank(List.of(new USJuneteenth()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

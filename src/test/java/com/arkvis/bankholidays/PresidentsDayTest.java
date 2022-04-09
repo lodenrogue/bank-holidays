@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USPresidentsDayHoliday;
+import com.arkvis.bankholidays.us.USPresidentsDay;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -39,7 +39,7 @@ class PresidentsDayTest {
     void should_returnFalse_when_checkingIfDayInTheWrongMonthIsAHoliday() {
         // 2022-05-16 is the third Monday of the month but is not in February
         LocalDate wrongMonth = LocalDate.of(2022, 5, 16);
-        Bank bank = new Bank(List.of(new USPresidentsDayHoliday()));
+        Bank bank = new Bank(List.of(new USPresidentsDay()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

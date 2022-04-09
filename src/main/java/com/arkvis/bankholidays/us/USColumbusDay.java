@@ -7,24 +7,24 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoField;
 
-public class USMartinLutherKingDayHoliday implements Holiday {
+public class USColumbusDay implements Holiday {
 
     @Override
     public boolean isHoliday(LocalDate day) {
-        return isInJanuary(day)
+        return isInOctober(day)
                 && isAMonday(day)
-                && isThirdWeek(day);
+                && isSecondWeek(day);
     }
 
-    private boolean isThirdWeek(LocalDate day) {
-        return day.get(ChronoField.ALIGNED_WEEK_OF_MONTH) == 3;
-    }
-
-    private boolean isInJanuary(LocalDate day) {
-        return day.getMonth().equals(Month.JANUARY);
+    private boolean isInOctober(LocalDate day) {
+        return day.getMonth().equals(Month.OCTOBER);
     }
 
     private boolean isAMonday(LocalDate day) {
         return day.getDayOfWeek().equals(DayOfWeek.MONDAY);
+    }
+
+    private boolean isSecondWeek(LocalDate day) {
+        return day.get(ChronoField.ALIGNED_WEEK_OF_MONTH) == 2;
     }
 }

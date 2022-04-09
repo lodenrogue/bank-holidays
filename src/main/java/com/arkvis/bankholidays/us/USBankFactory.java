@@ -12,17 +12,17 @@ public class USBankFactory {
 
     public static Bank createBank() {
         List<Holiday> holidays = List.of(
-                new USNewYearsDayHoliday(),
-                new USMartinLutherKingDayHoliday(),
-                new USPresidentsDayHoliday(),
-                new USMemorialDayHoliday(),
-                new USJuneteenthDayHoliday(),
-                new USIndependenceDayHoliday(),
-                new USLaborDayHoliday(),
-                new USColumbusDayHoliday(),
-                new USVeteransDayHoliday(),
-                new USThanksgivingDayHoliday(),
-                new USChristmasDayHoliday());
+                new USNewYearsDay(),
+                new USMartinLutherKingDay(),
+                new USPresidentsDay(),
+                new USMemorialDay(),
+                new USJuneteenth(),
+                new USIndependenceDay(),
+                new USLaborDay(),
+                new USColumbusDay(),
+                new USVeteransDay(),
+                new USThanksgiving(),
+                new USChristmas());
 
         return new Bank(holidays);
     }

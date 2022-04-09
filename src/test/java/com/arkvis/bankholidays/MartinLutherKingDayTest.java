@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USMartinLutherKingDayHoliday;
+import com.arkvis.bankholidays.us.USMartinLutherKingDay;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -39,7 +39,7 @@ class MartinLutherKingDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-03-21 is the third Monday of the month but is not in January
         LocalDate wrongMonth = LocalDate.of(2022, 3, 21);
-        Bank bank = new Bank(List.of(new USMartinLutherKingDayHoliday()));
+        Bank bank = new Bank(List.of(new USMartinLutherKingDay()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

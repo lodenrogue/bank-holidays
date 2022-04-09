@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USChristmasDayHoliday;
+import com.arkvis.bankholidays.us.USChristmas;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -38,7 +38,7 @@ class ChristmasDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-11-25 falls on the 25th but is not in December
         LocalDate wrongMonth = LocalDate.of(2022, 11, 25);
-        Bank bank = new Bank(List.of(new USChristmasDayHoliday()));
+        Bank bank = new Bank(List.of(new USChristmas()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

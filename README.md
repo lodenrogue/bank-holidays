@@ -42,17 +42,17 @@ Bank bank = new Bank(holidays);
 
 ### Existing Holidays
 
-- USChristmasDayHoliday
-- USColumbusDayHoliday
-- USIndependenceDayHoliday
-- USJuneteenthDayHoliday
-- USLaborDayHoliday
-- USMartinLutherKingDayHoliday
-- USMemorialDayHoliday
-- USNewYearsDayHoliday
-- USPresidentsDayHoliday
-- USThanksgivingDayHoliday
-- USVeteransDayHoliday
+- USChristmas
+- USColumbusDay
+- USIndependenceDay
+- USJuneteenth
+- USLaborDay
+- USMartinLutherKingDay
+- USMemorialDay
+- USNewYearsDay
+- USPresidentsDay
+- USThanksgiving
+- USVeteransDay
 
 ### Contributing
 Please feel free to submit a pull request with new holidays and banks

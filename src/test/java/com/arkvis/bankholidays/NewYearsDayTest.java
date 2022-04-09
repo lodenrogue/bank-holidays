@@ -1,7 +1,7 @@
 package com.arkvis.bankholidays;
 
 import com.arkvis.bankholidays.us.USBankFactory;
-import com.arkvis.bankholidays.us.USNewYearsDayHoliday;
+import com.arkvis.bankholidays.us.USNewYearsDay;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -38,7 +38,7 @@ class NewYearsDayTest {
     void should_returnFalse_when_checkingIfDayInWrongMonthIsAHoliday() {
         // 2022-06-01 is the first day of the month but is not January
         LocalDate wrongMonth = LocalDate.of(2022, 6, 1);
-        Bank bank = new Bank(List.of(new USNewYearsDayHoliday()));
+        Bank bank = new Bank(List.of(new USNewYearsDay()));
         assertFalse(bank.isHoliday(wrongMonth));
     }
 }

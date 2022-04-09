@@ -6,7 +6,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class USChristmasDayHoliday implements Holiday {
+public class USChristmas implements Holiday {
 
     private static final int CHRISTMAS_DAY = 25;
 
