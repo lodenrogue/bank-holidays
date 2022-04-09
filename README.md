@@ -1,6 +1,6 @@
-## Banking Holidays
+## Bank Holidays
 
-Java library for determining whether a given day is a banking holiday
+Java library for determining whether a given day is a bank holiday
 
 ### Usage
 
